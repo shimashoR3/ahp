@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/BMI_style.css">
+    <script>
+        function calc(){
+            var height = document.getElementById("height").value;
+            var height  = height / 100;
+            var weight = document.getElementById("weight").value;
+            var bmi = weight / (height * height);
+            var bmi = Math.floor(bmi * 100) / 100;
+            var tekitai = (height * height) * 22;
+            var tekitai = Math.floor(tekitai * 10) / 10;
+            var biyou = (height * height) * 20;
+            var biyou = Math.floor(biyou * 10) / 10;
+            document.getElementById("bmi").innerHTML = "BMI : " + bmi;
+            document.getElementById("tekitai").innerHTML = "適正体重 : " + tekitai + "kg" ;
+            document.getElementById("biyou").innerHTML = "美容体重 : " + biyou + "kg" ;
+
+            var message = "あなたは"; 
+            var jogen = "アドバイス：";           
+            if(bmi < 18.5){
+                message += "低体重（瘦せ型）です。";
+                jogen += "<br>鉄欠乏などの栄養不良による貧血は、<br>疲れやすさを感じたり、発育への影響が生じます。<br> また、月経不順のリスクに加え、将来的に骨量が減少したり、低出生体重児出産のリスク等も危惧されています。<br><br>摂取カロリーを増やしたり、<br>栄養バランスを整えたり、腸内環境やストレス対策で消化吸収機能をサポートするなどしていきましょう。";//やせ型の人にかける言葉
+            }else if(bmi >=18.5 && bmi < 25){
+                message += "普通体重です。";
+                jogen += "統計的に最も病気になりにくい体重です。この体重を維持していきましょう。";
+                 }else if(bmi >= 25 && bmi < 30){
+                message += "肥満（1度）です。";
+                jogen += "2型糖尿病や循環器疾患のリスクが高くなり、内臓脂肪が増えていく傾向がみられます。食生活を見直しましょう。";
+                }else if(bmi >= 30 && bmi < 35){
+                message += "肥満（2度）です。";
+                jogen += "食べ過ぎは、高血圧、高血糖、脂質異常症といった生活習慣病を引き起こし、最終的に、脳卒中や心筋梗塞などで命を落とす危険性が高まります。健康を維持するためには、肥満を解消し、標準体重を維持することが重要です。改善策の具体例として、適切なエネルギー摂取を心がけることや栄養バランスの取れた食事、間食は控えることがあります。";
+                }else if(bmi >= 35 && bmi < 40){
+                message += "肥満（3度）です。";
+                jogen += "食べ過ぎは、高血圧、高血糖、脂質異常症といった生活習慣病を引き起こし、最終的に、脳卒中や心筋梗塞などで命を落とす危険性が高まります。健康を維持するためには、肥満を解消し、標準体重を維持することが重要です。改善策の具体例として、適切なエネルギー摂取を心がけることや栄養バランスの取れた食事、間食は控えることがあります。";
+                }else if(bmi >= 40 ){
+                message += "肥満（4度）です。";
+                jogen += "食べ過ぎは、高血圧、高血糖、脂質異常症といった生活習慣病を引き起こし、最終的に、脳卒中や心筋梗塞などで命を落とす危険性が高まります。健康を維持するためには、肥満を解消し、標準体重を維持することが重要です。改善策の具体例として、適切なエネルギー摂取を心がけることや栄養バランスの取れた食事、間食は控えることがあります。";
+                }
+            
+                document.getElementById("message").innerHTML = message;
+                document.getElementById("jogen").innerHTML = jogen;
+       
+
+        }
+        
+    </script>
+</head>
+<body>
+	<h1>BMI計算</h1>
+	<h2>身長</h2>
+	<input type="text" value="" id="height" style="width: 250px; height: 40px; font-size:30px" >cm 
+	<h2>体重</h2>
+	<input type="text" value="" id="weight" style="width: 250px; height: 40px; font-size:30px">kg 
+	<hr>
+	<button onclick="calc()">計算</button>
+	<p id="bmi"></p>
+	<p id="message"></p>
+    <p id="jogen"></p>
+    <p id="tekitai"></p>
+    <p id="biyou"></p>
+	
+    
+   <b><font size="3px" color="#000">＊ 入力しなおすとリセットされます。</font></b>
+
+ <a href="index.html" class="btn btn-flat"><span>ホームへ戻る</span></a>
+
+
+
+
+</a> 
+</body>
+
+</html>
+

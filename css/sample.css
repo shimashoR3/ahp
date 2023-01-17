@@ -1,0 +1,24 @@
+body {
+	background-color: #9F0404;
+}
+
+p {
+    color :white;
+}
+button {
+  width: 350px;
+  height: 30px;
+  text-align: center;
+
+  background-color:#bc9d00;
+  display: block;
+  text-decoration: none;
+  color: black;
+  outline-color: black;
+  border-bottom: 3px solid #dc9d00;
+  margin:3% auto;
+  
+}
+
+
+  

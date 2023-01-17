@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.3.0/dist/leaflet.js"></script>
+  <script>
+ 
+
+
+    function init() {
+      var map = L.map('mapcontainer', { zoomControl: false });
+      var mpoint = [39.65619644372058, 140.24104420416694];
+      map.setView(mpoint, 10);
+      L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
+      }).addTo(map);
+      //ポップアップする文字（HTML可、ここでは画像を表示）
+    
+        //河辺ドライブイン
+        var sucontents = "秋田市河辺和田字坂本南262<br>営業時間：11:00~19:50<br>定休日：毎週水曜日<img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/016/799/kawadora.jpg' width='250' height='250'>"
+        var popup1 = L.popup({ maxWidth: 350 }).setContent(sucontents);
+   
+
+        //オステリア　ムーリベッキ
+       var sucontents = "秋田市中通二丁目2－30<br>営業時間<br>ランチ｜11：30～15：00 ディナー｜18：00～22：00<br>   ウエディング：平日｜12：00～20：00<br>土日祝｜9：00～20：00<br>定休日：不定休<img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/020/251/osteriamurivecchi.jpg' width='250' height='250'>"
+       var popup2 = L.popup({ maxWidth: 300 }).setContent(sucontents);
+
+        //ぱっぷや　市民市場店
+       var sucontents = "秋田市中通4-7-35<br>営業時間：11:00~21:00<br>定休日：不定休<img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/016/488/pappuya-siminitiba.jpg' width='250' height='250'>"
+       var popup3 = L.popup({ maxWidth: 300 }).setContent(sucontents);
+
+       //villa　フローラ 
+       var sucontents = "秋田市雄和妙法字糠塚1-1<br>営業時間： レストラン11:00〜18：00　ラストオーダー17:00<br>定休日：無休(年末年始の休業有り) <img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/005/842/villaflora1.jpg' width='250' height='250'>"
+       var popup4 = L.popup({ maxWidth: 350 }).setContent(sucontents);
+
+       //ビストロ　ラエール 
+       var sucontents = "秋田市山王一丁目8-9 <br>営業時間：〈ランチ〉18：00～24：00<br>定休日：日曜日・祝日(連休の場合、最終日休み)<img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/005/825/sanbimu11.jpg' width='250' height='250'>"
+       var popup5 = L.popup({ maxWidth: 300 }).setContent(sucontents);
+    
+       //フランス料理　サンビーム
+       var sucontents = "秋田市山王三丁目4-32<br>営業時間<br>〈ランチ〉11：30～14：00ラストオーダー13：45<br>定休日：毎週月曜日・毎月第一・第三火曜日<br>毎年12月30日～1月3日<img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/005/825/sanbimu11.jpg' width='250' height='250'>"
+       var popup6 = L.popup({ maxWidth: 300 }).setContent(sucontents);
+    
+        //佐藤養助　秋田店
+        var sucontents = "秋田市中通2－6－1西武秋田店B1F<br>営業時間：17：00～21：00ラストオーダー20：00<br>定休日：無休<img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/008/902/yousuke3.png' width='250' height='250'>"
+        var popup7 = L.popup({ maxWidth: 300 }).setContent(sucontents);
+
+        //酒肴旬彩　白帆
+        var sucontents = "秋田市土崎港中央一丁目14-11<br>営業時間：17：00～23：00<br>定休日：年末年始、他不定休<img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/005/832/siraho2.jpg' width='250' height='250'>"
+        var popup8 = L.popup({ maxWidth: 350 }).setContent(sucontents);
+
+        //とんかつ　かつ吉　山王店
+        var sucontents = "秋田市山王一丁目3－16<br>営業時間：月曜日　昼11：00～14：00　夜17：00～21：00<img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/020/246/katsukiti_sannou.jpg' width='250' height='250'>"
+        var popup9 = L.popup({ maxWidth: 350 }).setContent(sucontents);
+
+        //とんかつ　かつ吉　外旭川店
+        var sucontents = "秋田市外旭川八幡田一丁目1－36<br>営業時間：昼11：00～14：00　夜17：00～21：00<br>定休日：火曜日<img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/020/249/katsukiti_sotoasahikawa.jpg' width='250' height='250'>"
+        var popup10 = L.popup({ maxWidth: 300 }).setContent(sucontents);
+
+        //御厨　光琳
+        var sucontents = "秋田市中通1丁目4-3 エリアなかいち2F<br>営業時間昼：11：00～15：00　夜17：00～21：00<br>定休日：無休<img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/005/811/mikuriyakourinn1.jpg' width='250' height='250'>"
+        var popup11 = L.popup({ maxWidth: 300 }).setContent(sucontents);
+
+        //無限堂　大町本店
+        var sucontents = "秋田市大町一丁目3－2<br>営業時間：昼11：00～14：00　夜17：00～22：00<br>定休日：不定休<img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/005/813/mugen-oomachi1.jpg' width='250' height='250'>"
+        var popup12 = L.popup({ maxWidth: 300 }).setContent(sucontents);
+
+        //禁煙ばー　縁～ENISHI～
+        var sucontents = "秋田市山王一丁目7－20栄憲ビル1F<br>営業時間：18：00～24：00<br>定休日：不定休<img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/005/792/enishi1.jpg' width='250' height='250'>"
+        var popup13 = L.popup({ maxWidth: 300 }).setContent(sucontents);
+
+        //ミート＆デリカ　一力　
+        var sucontents = "秋田市山王中園町3-8<br>営業時間：8：30～19：00<br>定休日：日曜日・祝日<img src='https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/016/795/ichiriki.jpg' width='250' height='250'>"
+        var popup14 = L.popup({ maxWidth: 350 }).setContent(sucontents);
+
+
+
+        L.marker([39.65619644372058, 140.24104420416694]).bindPopup(popup1).bindTooltip("河辺ドライブイン").addTo(map);
+
+       L.marker([39.71644028836333, 140.12426735396582]).bindPopup(popup2).bindTooltip("オステリア　ムーリベッキ").addTo(map);
+
+       L.marker([39.715188465023175, 140.1259624406197]).bindPopup(popup3).bindTooltip("ぱっぷや　市民市場店").addTo(map);
+
+       L.marker([39.595721624084575, 140.18626949999114]).bindPopup(popup4).bindTooltip("villa　フローラ").addTo(map);
+
+       L.marker([39.72279534505813, 140.1026758828018]).bindPopup(popup5).bindTooltip("ビストロ　ラエール").addTo(map);
+
+        L.marker([39.71641549406451, 140.10754669814418]).bindPopup(popup6).bindTooltip("フランス料理　サンビーム").addTo(map);
+
+        L.marker([39.71715223930507, 140.12704555581539]).bindPopup(popup7).bindTooltip("佐藤養助　秋田店").addTo(map);
+
+        L.marker([39.75227845270114, 140.06832434047365]).bindPopup(popup8).bindTooltip("酒肴旬彩　白帆").addTo(map);
+
+        L.marker([39.72134023720808, 140.102245740473]).bindPopup(popup9).bindTooltip("とんかつ　かつ吉　山王店").addTo(map);
+
+        L.marker([39.743485969961554, 140.10933797115854]).bindPopup(popup10).bindTooltip("とんかつ　かつ吉　外旭川店").addTo(map);
+
+        L.marker([39.71744734392198, 140.12179909814427]).bindPopup(popup11).bindTooltip("御厨　光琳").addTo(map);
+
+        L.marker([39.71968318021411, 140.11593501163742]).bindPopup(popup12).bindTooltip("無限堂　大町本店").addTo(map);
+
+        L.marker([39.72261384575318, 140.10191168465133]).bindPopup(popup13).bindTooltip("禁煙ばー　縁～ENISHI～").addTo(map);
+
+        L.marker([39.71395508216455, 140.0972503846511]).bindPopup(popup14).bindTooltip("ミート＆デリカ　一力").addTo(map);
+
+
+    }
+  </script>
+
+</head>
+  <body>
+
+<body onload="init()">
+
+  <div id="mapcontainer" style="position:absolute;top:0;left:0;right:0;bottom:0;"></div>
+</body>
+
+
+</html>

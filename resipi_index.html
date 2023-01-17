@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script><script src="classic.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/resipi_style.css">
+    <script>
+        function play() {
+ 
+            var no = Math.floor(Math.random() * 45);
+
+
+
+            
+            
+            var image_name;
+        
+  
+            
+    
+            if (no == 0) {
+                image_name = "1.png";
+               
+
+               
+
+            } else if (no == 1) {
+                image_name = "2.png";
+  
+
+            } else if (no == 2) {
+                image_name = "3.png";
+                
+  
+             
+
+            } else if (no == 3) {
+                image_name = "4.png";
+    
+
+
+             } else if (no == 4) {
+                image_name = "5.png";
+         
+
+                 } else if (no == 5) {
+                image_name = "6.png";
+      
+
+                 } else if (no == 6) {
+               image_name = "7.png";
+       
+                 } else if (no == 7) {
+               image_name = "8.png";
+               
+
+                 } else if (no == 8) {
+                image_name = "9.png";
+        
+
+                 } else if (no == 9) {
+                image_name = "10.png";
+
+
+                } else if (no == 10) {
+                image_name = "11.png";
+  
+
+
+                 } else if (no == 11) {
+                image_name = "12.png";
+ 
+
+
+                 } else if (no == 12) {
+                image_name = "13.png";
+
+
+
+                 } else if (no == 13) {
+                image_name = "14.png";
+
+
+
+                 } else if (no == 14) {
+                image_name = "15.png";
+
+
+                 } else if (no == 15) {
+                image_name = "16.png";
+
+
+
+                 } else if (no == 16) {
+                image_name = "17.png";
+        
+
+
+                 } else if (no == 17) {
+                image_name = "18.png";
+ 
+
+
+
+
+                 } else if (no == 18) {
+                image_name = "19.png";
+     
+
+
+                 } else if (no == 19) {
+                image_name = "20.png";
+
+  
+
+
+                 } else if (no == 20) {
+                image_name = "21.png";
+
+                                
+                } else if (no == 21) {
+                     image_name = "22.png";
+         
+                   
+             
+                } else if (no == 22) {
+                   image_name = "23.png";
+     
+
+                
+                
+                } else if (no == 23) {
+                    image_name = "24.png";
+               
+                } else if (no == 24) {
+                      image_name = "25.png";
+          
+
+  
+                } else if (no == 25) {
+                    image_name = "26.png";
+                
+
+                } else if (no == 26) {
+                   image_name = "27.png";
+                
+               
+            
+                } else if (no == 27) {
+                    image_name = "28.png";
+               
+                } else if (no == 28) {
+                      image_name = "29.png";
+               
+                } else if (no == 29) {
+                     image_name = "30.png";
+               
+                } else if (no == 30) {
+                     image_name = "31.png";
+                
+                } else if (no == 31) {
+                     image_name = "32.png";
+
+                } else if (no == 32) {
+                     image_name = "33.png";
+                
+               
+                } else if (no == 33) {
+                image_name = "34.png";
+      
+              
+                } else if (no == 34) {
+                image_name = "35.png";
+                
+                
+                } else if (no == 35) {
+                image_name = "36.png";
+               
+
+                } else if (no == 36) {
+                 image_name = "37.png";
+              
+                } else if (no == 37) {
+                     image_name = "38.png";
+                
+                } else if (no == 38) {
+                     image_name = "39.png";
+                
+                } else if (no == 39) {
+                     image_name = "40.png";
+              
+                } else if (no == 40) {
+                     image_name = "41.png";
+               
+                } else if (no == 41) {
+                     image_name = "42.png";
+                
+                } else if (no == 42) {
+                     image_name = "43.png";
+                
+                } else if (no == 43) {
+                     image_name = "44.png";
+            
+            } else {
+                image_name = "45.png";
+
+
+    
+
+                
+               
+
+                      
+
+            }
+
+         
+   
+            document.getElementById("nanitaberu").src = "images/" + image_name;
+             document.getElementById("playBtn").innerHTML = "他のもの作る？";
+        }
+    </script>
+</head>
+<body>
+	<img src="images/nanitaberu.png" id="nanitaberu" width="100%" height="100%" >
+    <body bgcolor="#ff9966" text="#ffffff">
+
+    <button id="playBtn" onclick="play()"  >今日は何食べる？</button>
+    <button type="button" onclick="location.href='resipi_index.html'" value="レシピ">レシピに戻る</button>   
+ 
+
+ <a href="index.html" class="btn btn-flat"><span>ホームへ戻る</span></a>
+
+ <p>野菜も摂れる　減塩＆簡単！レシピ一覧は<a href="https://www.pref.akita.lg.jp/pages/archive/43832">こちら！</a></p>
+ <p>心臓に優しい 秋田県のハートレシピ一覧は<a href="https://www.jhf.or.jp/heart_recipe/?tab=akita#tab-contents">こちら！</a></p>
+
+
+</body>
+
+</html>
